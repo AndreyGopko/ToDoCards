@@ -1,0 +1,22 @@
+<aside>
+    <button class="btn btn-default" ng-click="vmS.getUsers()" ng-disabled="vmS.disabled">
+        <span >Get Users</span>
+    </button>
+    <uib-progressbar max=100 value=vmS.progress></uib-progressbar>
+    <table class="table table-hover table-bordered table-striped" ng-show="vmS.disabled">
+        <thead>
+            <tr ng-repeat="item in vmS.itemsHead">
+                <td ng-bind="item.title"></td>
+                <td ng-bind="item.col1"></td>
+                <td ng-bind="item.col2"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in vmS.itemsBody">
+                <td ng-bind="item.title"></td>
+                <td ng-bind="item.col1"></td>
+                <td ng-bind="item.col2"></td>
+            </tr>
+        </tbody>
+    </table>
+</aside>

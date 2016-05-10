@@ -1,0 +1,8 @@
+<aside>
+    <div class="form-group">
+        <input class="form-control" ng-model="query" placeholder="filter">
+    </div>
+    <div class="list-group">
+        <a href="#" class="list-group-item" ng-class="{'active':item.active}" ng-repeat="item in vm.classes | filter:query" ng-click="vm.changeClass($index)">Set class: {{item.name}}</a>
+    </div>
+</aside>

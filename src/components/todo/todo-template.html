@@ -1,0 +1,15 @@
+<div class="col-xs-6 col-lg-4">
+    <div class="panel" ng-class="vmT.classes[selected.id || vmT.HomeController.class || 0]">
+        <div class="panel-heading">New Tasks
+            <button type="button" class="close" aria-hidden="true" ng-click="vmT.removeCard(vmT.card, vmT.row)">&times;</button>
+        </div>
+        <div class="panel-body">
+            <form>
+                <textarea class="form-control" cols="27" rows="5" style="resize:vertical" ng-model="vmT.text" ng-hide="vmT.card.visible" required></textarea>
+                <pre class="panel-body" ng-show="vmT.card.visible" ng-bind="vmT.text"></pre>
+                <button class="btn btn-default" type="submit" ng-click="vmT.saveCard(vmT.row, vmT.card, vmT.text)" ng-hide="vmT.card.visible">Save</button>
+                <select class="form-control" ng-show="vmT.card.visible" ng-options="option.label for option in vmT.options track by option.id" ng-model="selected" ng-init="selected=vmT.options[0]"></select>
+            </form>
+        </div>
+    </div>
+</div>

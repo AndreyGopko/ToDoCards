@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <side-bar></side-bar>
+            <side-bar-table></side-bar-table>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+            <todo-row row="row" ng-repeat="row in homeVm.rows" ng-if="homeVm.rows.length > 0"></todo-row>
+            <copier size="right" on-add="homeVm.addCard()"></copier>
+        </div>
+    </div>
+</div>

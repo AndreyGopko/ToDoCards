@@ -1,0 +1,6 @@
+<div>
+    <div class="row">
+        <todo card="card" row="vmTR.row" ng-repeat="(id, card) in vmTR.row.cards"></todo>
+        <copier size="right" on-add="vmTR.addCard()" ng-if="vmTR.row.cards.length < 3"></copier>
+    </div>
+</div>
